@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+
+
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+
+
+                    </div>
+
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">اطلاعات معدن {{ madan.name }}</h3>
+
+
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body table-responsive p-0">
+                                <table class="table table-hover">
+                                    <tr>
+                                        <th>نام معدن</th>
+                                        <th>کشور</th>
+                                        <th>استان</th>
+                                        <th>شهر</th>
+                                        <th>نوع سنگ</th>
+                                        <th>توضیحات</th>
+                                    </tr>
+                                    <tr>
+                                        <td>{{ madan.name }}</td>
+                                        <td>{{ madan.country }}</td>
+                                        <td>{{ madan.province }}</td>
+                                        <td>{{ madan.city }}</td>
+                                        <td>{{ madan.stone_type }}</td>
+                                        <td>{{ madan.description }}</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+
+
+
+{% endblock %}

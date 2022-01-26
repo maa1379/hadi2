@@ -1,0 +1,15 @@
+      <li class="treeview">
+						<a href="#">
+							<i data-feather="server"></i>
+							<span>معادن</span>
+							<span class="pull-right-container">
+								<i class="fa fa-angle-right pull-right"></i>
+							</span>
+						</a>
+						<ul class="treeview-menu">
+                            {% for m in madan %}
+							<li><a href="{% url "madan:madan_detail" m.id %}"><i class="ti-more"></i>{{ m }}</a></li>
+                            {% endfor %}
+                            <li><a href="{% url "madan:madan_create" %}"><i class="ti-more"></i>افزودن</a></li>
+						</ul>
+					</li>

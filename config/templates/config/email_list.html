@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+
+
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+
+
+                    </div>
+
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">ایمیل های ارسال شده</h3>
+
+
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body table-responsive p-0">
+                                <table class="table table-hover">
+                                    <tr>
+                                        <th>عنوان ایمیل</th>
+                                        <th>متن ایمیل</th>
+                                        <th>تاریخ ارسال</th>
+                                    </tr>
+                                    {% for email in object_list %}
+                                    <tr>
+                                        <td>{{ email.subject }}</td>
+                                        <td colspan="4">{{ email.message }}</td>
+                                        <td>{{ email.created }}</td>
+                                    </tr>
+                                    {% empty %}
+                                        <h1 class="text-center">هیچ ایمیلی تا کنون ارسال نشده</h1>
+                                    {% endfor %}
+                                </table>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+
+
+
+{% endblock %}

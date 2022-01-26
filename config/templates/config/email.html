@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block content %}
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <div class="container-full">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="d-flex align-items-center">
+                    <div class="mr-auto">
+                        <h3 class="page-title">ویرایشگر متن</h3>
+                        <div class="d-inline-block align-items-center">
+                            <nav>
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href=""><i
+                                            class="mdi mdi-home-outline"></i></a></li>
+
+                                    <li class="breadcrumb-item active" aria-current="page">ارسال ایمیل</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="row">
+                    <div class="col-12">
+
+                        <div class="box">
+                            <div class="box-header">
+                                <h4 class="box-title">ارسال ایمیل برای کاربران<br>
+
+                                </h4>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                 موضوع ایمیل را اینجا وارد کنید
+                                <form method="post" action="">
+
+                                        						<textarea id="editor1" name="editor1" rows="2" cols="80">
+						</textarea><br>
+                                    <br><br>
+متن ایمیل را اینجا وارد کنید
+<div></div>
+                                    <textarea id="editor1" name="editor2" rows="10" cols="80" placeholder="">
+						</textarea>
+                                    <br>
+                                    <br>
+                                    <input type="submit" value="ارسال ایمیل" class="col-7 m-auto btn-success">
+                                </form>
+                            </div>
+                        </div>
+                        <!-- /.box -->
+
+
+                    </div>
+                    <!-- /.col-->
+                </div>
+                <!-- ./row -->
+            </section>
+            <!-- /.content -->
+        </div>
+    </div>
+{% endblock %}

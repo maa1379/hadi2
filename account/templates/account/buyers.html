@@ -1,0 +1,82 @@
+﻿{% extends "base.html" %}
+{% block content %}
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <div class="container-full">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="d-flex align-items-center">
+                    <div class="mr-auto">
+                        <h3 class="page-title">لیست خریداران</h3>
+                        <div class="d-inline-block align-items-center">
+                            <nav>
+                                <ol class="breadcrumb">
+
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <section class="content">
+
+                <div class="row">
+
+
+                    <div class="col-12 col-lg-12">
+                        <div class="box">
+                            <div class="box-header with-border">
+                                <h4 class="box-title">خریداران</h4>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <div class="table-responsive">
+                                    <table class="table mb-0">
+                                        <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col">نوع سنگ</th>
+                                            <th scope="col">کد سینه کار</th>
+                                            <th scope="col">شماره سریال قله</th>
+                                            <th scope="col">تناژ</th>
+                                            <th scope="col">کد درجه بندی</th>
+                                            <th scope="col">کد رنگ</th>
+                                            <th scope="col">کد پله</th>
+                                            <th scope="col">نام خریدار</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+
+                                        {% for user_exportal in exportal %}
+                                            <tr>
+                                                <td>{{ user_exportal.stone_name }}</td>
+                                                <td>{{ user_exportal.kode_sine_kar }}</td>
+                                                <td>{{ user_exportal.shomareh_serail_qoleh_dr_madan }}</td>
+                                                <td>{{ user_exportal.vazne_taghribi }}</td>
+                                                <td>{{ user_exportal.kode_rang }}</td>
+                                                <td>{{ user_exportal.kode_peleh }}</td>
+                                                <td>{{ user_internal.buyer }}</td>
+                                            </tr>
+                                        {% empty %}
+                                            <h1 class="text-center">هیچ خریداری در سیستم ثبت نشده</h1>
+                                        {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                        <!-- /.box -->
+                    </div>
+
+
+                </div>
+        </div>
+        <!-- /.row -->
+
+        </section>
+        <!-- /.content -->
+    </div>
+    </div>
+{% endblock %}

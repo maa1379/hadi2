@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+
+                    <div class="card m-auto">
+                        <div class="card-header">
+                            <h2 class="card-title text-center">لیست کلمات ممنوعه درخواست ها</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body p-0">
+                            <table class="table table-striped">
+                                <tr>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th class="text-center" scope="col-10">کلمه</th>
+
+                                </tr>
+                                </tr>
+
+                                {% for product in object_list %}
+                                    <tr>
+                                        <td>{{ forloop.counter }}</td>
+                                        <td class="text-center">{{ product.word }}</td>
+                                    </tr>
+
+                                {% endfor %}
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+    </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+{% endblock %}
